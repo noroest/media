@@ -1,0 +1,41 @@
+﻿@page
+@model ProyeArticulos.Pages.Articulos.DeleteModel
+
+@{
+    ViewData["Title"] = "Eliminar";
+}
+
+<h1>Eliminar</h1>
+
+<h3>Tu estas seguro de borrar esto?</h3>
+<div>
+    <h4>Articulo</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Articulo.nombre)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Articulo.nombre)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Articulo.costo)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Articulo.costo)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Articulo.precio)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Articulo.precio)
+        </dd>
+    </dl>
+    <img src="data:image/jpeg;base64,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" width="100px" height="100px" />
+
+    <form method="post">
+        <input type="hidden" asp-for="Articulo.Id" />
+        <input type="submit" value="Delete" class="btn btn-danger" /> |
+        <a asp-page="./Index">Back to List</a>
+    </form>
+</div>
